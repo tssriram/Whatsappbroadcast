@@ -20,7 +20,7 @@ stringa=list()
 
 input("Enter after scanning")
 
-with open('Second571.csv', 'r') as file:
+with open('Contacts.csv', 'r') as file:
     reader = csv.reader(file)
     for name in reader:
        
@@ -67,20 +67,7 @@ with open('Second571.csv', 'r') as file:
         try:
             #msgbox2 = driver.find_element_by_xpath('//div[@class = "{}"][@data-tab="1"]'.format(nm))
             msgbox2 = wait.until(EC.visibility_of_element_located((By.XPATH, '//div[@class="{}"][@data-tab="1"]'.format(nm))))
-            
-            msgbox2.send_keys("*Register here:* https://forms.gle/C3E78Rc1XjPaLgaC7")
-            msgbox2.send_keys(Keys.SHIFT, Keys.ENTER)
-            msgbox2.send_keys(Keys.SHIFT, Keys.ENTER)
-            msgbox2.send_keys("*May 13th, 5 PM*")
-            msgbox2.send_keys(Keys.SHIFT, Keys.ENTER)
-            msgbox2.send_keys("We would like to invite you to attend the webinar- *Post COVID: The landscape for Start-ups and Entrepreneurs*.")
-            msgbox2.send_keys(Keys.SHIFT, Keys.ENTER)
-            msgbox2.send_keys("The Startup landscape is going to be dramatically altered following the COVID-19 pandemic. This webinar would highlight the opportunities that this would throw up. *Prof. Thillai Rajan would also talk about the strategies that start-up founders need to adopt to seize the momentum*.")
-            msgbox2.send_keys(Keys.SHIFT, Keys.ENTER)
-            msgbox2.send_keys(Keys.SHIFT, Keys.ENTER)
-            msgbox2.send_keys("Warm regards, ")
-            msgbox2.send_keys(Keys.SHIFT, Keys.ENTER)
-            msgbox2.send_keys("Team YNOS (www.ynos.in)")
+            msgbox2.send_keys("Text here")
             time.sleep(0.75)
             
         except:
